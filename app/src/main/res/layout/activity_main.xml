@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.tipcalculator.MainActivity"
+    android:background="@drawable/diner">
+
+<TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/title"
+    android:textSize="30sp"
+    android:layout_centerHorizontal="true"
+    android:textColor="#ffff"/>
+
+    <TextView
+        android:id="@+id/totalPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="41dp"
+        android:text="@string/total_prompt"
+        android:textSize="20sp"
+        android:textColor="#ffff"/>
+
+    <EditText
+        android:id="@+id/total_bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/totalPrompt"
+        android:layout_toEndOf="@+id/totalPrompt"
+        android:inputType="numberDecimal"
+        android:textSize="30sp"
+        android:layout_toRightOf="@+id/totalPrompt"
+        android:ems="5"
+        android:textColor="#ffff"/>
+
+    <TextView
+
+        android:id="@+id/dinernum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/totalPrompt"
+        android:layout_marginTop="44dp"
+        android:text="@string/diners"
+        android:textSize="20sp"
+        android:textColor="#ffff"/>
+    <EditText
+        android:id="@+id/dinerNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignBottom="@id/dinernum"
+        android:layout_toEndOf="@id/dinernum"
+        android:layout_toRightOf="@id/dinernum"
+        android:ems="5"
+        android:inputType="number"
+        android:textColor="#ffff"/>
+
+    <Button
+        android:id="@+id/calcbut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:text="Calculate"
+        android:onClick="calculate"
+        />
+
+    <SeekBar
+        android:id="@+id/perc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dinernum"
+        android:layout_marginTop="53dp"
+        android:max="20"
+        android:progress="10"
+        />
+
+    <CheckBox
+        android:id="@+id/splitbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/perc"
+        android:buttonTint="#ffff"
+         />
+    <TextView
+        android:id="@+id/checktext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/split"
+        android:layout_toRightOf="@id/splitbox"
+        android:layout_toEndOf="@id/splitbox"
+        android:layout_alignBottom="@id/splitbox"
+        android:textColor="#ffff"
+        />
+
+    <TextView
+        android:id="@+id/tipamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="10"
+        android:textSize="25sp"
+        android:textColor="#ffff"/>
+
+    <TextView
+        android:id="@+id/percLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/perc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="10%"
+        android:textColor="#ffff"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/totaltip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/calcbut"
+        android:layout_marginBottom="25dp"
+        android:layout_toEndOf="@+id/checktext"
+        android:text="Total+Tip: $"
+        android:textColor="#ffff"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
