@@ -88,19 +88,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calculate(View v) {
+        double t;
+        double total_tip;
         double progress = tseekBar.getProgress();
+        t=total;
         if (split.isChecked()) {
-            tip = total * (progress / 100);
-            total += tip;
-            total /= diners;
+            tip = t * (progress / 100);
+            total_tip= (total + tip)/diners;
             tiplabel.setText("Tip: $" +String.format("%.2f",tip));
-            totaltip.setText("Total: $"+String.format("%.2f",total)+" per person");
+            totaltip.setText("Total: $"+String.format("%.2f",total_tip)+" per person");
         }else{
-            tip=total*(progress/100);
-            total+=tip;
+            tip=t*(progress/100);
+            total_tip= total+tip;
             tiplabel.setText("Tip: $"+String.format("%.2f",tip));
-            totaltip.setText("Total is: $"+String.format("%.2f",total));
-
+            totaltip.setText("Total is: $"+String.format("%.2f",total_tip));
         }
 
 
